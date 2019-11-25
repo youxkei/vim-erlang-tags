@@ -87,12 +87,12 @@
 -type cmd_line_arg() :: string().
 -type cmd_line_arguments() :: [cmd_line_arg()].
 -type parsed_params() ::
-    #{include := list(string()),
-      ignore := list(string()),
-      output := list(string()),
-      otp := boolean(),
-      verbose := boolean(),
-      help := boolean()
+    #{include => list(string()),
+      ignore => list(string()),
+      output => list(string()),
+      otp => boolean(),
+      verbose => boolean(),
+      help => boolean()
      }.
 -define(DEFAULT_PARSED_PARAMS,
         #{include => [],
@@ -103,8 +103,8 @@
           help => false}).
 
 -type config() ::
-    #{explore := list(file:filename()),
-      output := file:filename()
+    #{explore => list(file:filename()),
+      output => file:filename()
      }.
 
 -spec allowed_cmd_params() -> [{cmd_param(), cmd_line_arguments()}].
